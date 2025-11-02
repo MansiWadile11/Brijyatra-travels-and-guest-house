@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brij Yatra Travels - Premium taxi services and comfortable guest house stays in Mathura, Vrindavan. Book cabs for local sightseeing, outstation trips, and pilgrimage tours.">
+    <meta name="keywords" content="Mathura taxi service, Vrindavan cabs, Brij Yatra Travels Guest House Mathura, Mathura tour packages, Vrindavan sightseeing, Barsana taxi, Govardhan parikrama">
+    <title>Brij Yatra Travels - Taxi Services & Guest House in Mathura</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --saffron: #FF9933;
+            --maroon: #800020;
+            --cream: #FFF8E1;
+            --gold: #FFD700;
+            --dark-blue: #00008B;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--cream);
+            color: #333;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 70vh;
+        }
+        
+        .btn-primary {
+            background-color: var(--saffron);
+            color: white;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--maroon);
+            transform: translateY(-3px);
+        }
+        
+        .btn-secondary {
+            background-color: var(--maroon);
+            color: white;
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--saffron);
+            transform: translateY(-3px);
+        }
+        
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+            transform: translateY(-20px);
+            opacity: 0;
+            display: none;
+        }
+        
+        #mobile-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+            display: block;
+        }
+        
+        .service-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .room-card {
+            transition: transform 0.3s;
+        }
+        
+        .room-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .footer {
+            background: linear-gradient(180deg, var(--maroon) 0%, #4B0012 100%);
+            color: white;
+        }
+        
+        .footer a:hover {
+            color: var(--saffron);
+        }
+        
+        .gallery-item {
+            overflow: hidden;
+        }
+        
+        .gallery-item img {
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-bg {
+                min-height: 50vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo/Brand -->
+                <div class="flex-shrink-0 flex items-center">
+                    <img src="img/Logo.png" alt="Brij Yatra Travels Logo" class="h-12 mr-5" id="logo">
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-800">Brij Yatra Travels</h1>
+                        <p class="text-xs text-gray-600">Mathura • Vrindavan • Barsana • Govardhan</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-1">
+                    <a href="#home" class="px-4 py-2 text-gray-800 font-medium rounded-md hover:bg-saffron hover:text-white transition duration-300">Home</a>
+                    <a href="#about" class="px-4 py-2 text-gray-800 font-medium rounded-md hover:bg-saffron hover:text-white transition duration-300">About</a>
+                    <a href="#services" class="px-4 py-2 text-gray-800 font-medium rounded-md hover:bg-saffron hover:text-white transition duration-300">Services</a>
+                    <a href="#guest-house" class="px-4 py-2 text-gray-800 font-medium rounded-md hover:bg-saffron hover:text-white transition duration-300">Guest House</a>
+                    <a href="#gallery" class="px-4 py-2 text-gray-800 font-medium rounded-md hover:bg-saffron hover:text-white transition duration-300">Gallery</a>
+                    <a href="#contact" class="px-4 py-2 text-gray-800 font-medium rounded-md hover:bg-saffron hover:text-white transition duration-300">Contact</a>
+                </nav>
+
+                <!-- CTA Buttons -->
+                <div class="hidden lg:flex items-center space-x-4 ml-6">
+                    <a href="tel:+919761800777" class="bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition duration-300" aria-label="Call us">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <a href="https://wa.me/919761800777" class="bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition duration-300" aria-label="Message us on WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="menu-toggle" class="text-gray-800 hover:text-saffron focus:outline-none" aria-label="Toggle mobile menu">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="lg:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-4 space-y-1 bg-white shadow-md">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-saffron hover:text-white">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-saffron hover:text-white">About</a>
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-saffron hover:text-white">Services</a>
+                <a href="#guest-house" class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-saffron hover:text-white">Guest House</a>
+                <a href="#gallery" class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-saffron hover:text-white">Gallery</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-saffron hover:text-white">Contact</a>
+                <div class="pt-4 grid grid-cols-2 gap-4">
+                    <a href="tel:+919761800777" class="bg-green-500 text-white p-2 rounded-full text-center hover:bg-green-600" aria-label="Call us">
+                        <i class="fas fa-phone"></i> Call
+                    </a>
+                    <a href="https://wa.me/919761800777" class="bg-green-500 text-white p-2 rounded-full text-center hover:bg-green-600" aria-label="Message us on WhatsApp">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg flex items-center justify-center text-white" id="home">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Experience Divine Mathura & Vrindavan</h1>
+            <p class="text-xl md:text-2xl mb-8">Premium Taxi Services & Comfortable Guest House Stays</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:+919761800777" class="btn-primary px-8 py-3 rounded-full font-bold text-lg">Call to Book Taxi</a>
+                <a href="https://wa.me/919761800777" class="btn-secondary px-8 py-3 rounded-full font-bold text-lg">WhatsApp to Book Stay</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="py-16 bg-white" id="about">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">About Brij Yatra Travels</h2>
+                <div class="w-20 h-1 bg-saffron mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Mathura Temple" class="rounded-lg shadow-lg w-full" loading="lazy">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Your Trusted Travel Partner in Mathura</h3>
+                    <p class="text-gray-600 mb-4">Founded in 2010, Brij Yatra Travels has been serving pilgrims and tourists with reliable taxi services and comfortable accommodations in the holy cities of Mathura and Vrindavan.</p>
+                    <p class="text-gray-600 mb-4">We provide the best service for our customers, earning a 5.0 rating from 20 reviews.</p>
+                    <p class="text-gray-600 mb-6">Our mission is to provide seamless travel experiences that allow you to focus on your spiritual journey while we take care of all your transportation and accommodation needs.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-center">
+                            <div class="bg-saffron text-white p-2 rounded-full mr-3">
+                                <i class="fas fa-car"></i>
+                            </div>
+                            <span class="font-medium">100+ Vehicles</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-saffron text-white p-2 rounded-full mr-3">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <span class="font-medium">10,000+ Happy Customers</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-saffron text-white p-2 rounded-full mr-3">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <span class="font-medium">50+ Destinations Covered</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-saffron text-white p-2 rounded-full mr-3">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <span class="font-medium">Luxury Guest House</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn-primary inline-block px-6 py-2 rounded-full font-medium">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-gray-50" id="services">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Taxi & Travel Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore the divine land of Lord Krishna with our comprehensive travel solutions</p>
+                <div class="w-20 h-1 bg-saffron mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden service-card">
+                    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1583&q=80" alt="Local Sightseeing" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <div class="bg-saffron text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                            <i class="fas fa-map-marked-alt text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Local Sightseeing</h3>
+                        <p class="text-gray-600 mb-4">Explore Mathura, Vrindavan, Govardhan, Barsana and other sacred places with our knowledgeable drivers.</p>
+                        <ul class="text-gray-600 mb-4 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-saffron mr-2"></i> Half-day & Full-day packages</li>
+                            <li class="flex items-center"><i class="fas fa-check text-saffron mr-2"></i> AC & Non-AC vehicles</li>
+                            <li class="flex items-center"><i class="fas fa-check text-saffron mr-2"></i> Multi-language drivers</li>
+                        </ul>
+                        <a href="tel:+919761800777" class="btn-primary inline-block px-4 py-2 rounded-full text-sm font-medium">Call to Book</a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden service-card">
+                    <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1568&q=80" alt="Outstation Trips" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <div class="bg-saffron text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                            <i class="fas fa-route text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Outstation Trips</h3>
+                        <p class="text-gray-600 mb-4">Travel comfortably to nearby cities and pilgrimage sites with our reliable outstation taxi services.</p>
+                        <ul class="text-gray-600 mb-4 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-saffron mr-2"></i> Mathura,Vrindavan,Barsana,Govardhan</li>
+                            <li class="flex items-center"><i class="fas fa-check text-saffron mr-2"></i> One-way & round trips</li>
+                            <li class="flex items-center"><i class="fas fa-check text-saffron mr-2"></i> 24/7 availability</li>
+                        </ul>
+                        <a href="tel:+919761800777" class="btn-primary inline-block px-4 py-2 rounded-full text-sm font-medium">Call to Book</a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden service-card">
+                    <img src="https://media.istockphoto.com/id/2191663311/photo/keshi-ghat-krishna-temple-vrindavan.webp?a=1&b=1&s=612x612&w=0&k=20&c=u779e6T3g-7KsXLnnIgilud-8pjHyR0r4v2Jf-rx9G4=" alt="Pilgrimage Tours" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <div class="bg-saffron text-white rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                            <i class="fas fa-om text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Pilgrimage Tours</h3>
+                        <p class="text-gray-600 mb-4">Special packages for spiritual journeys including Govardhan Parikrama and Braj Mandal Parikrama.</p>
+                        <ul class="text-gray-600 mb-4 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-saffron mr-2"></i> Customized itineraries</li>
+                            <li class="flex items-center"><i class="fas fa-check text-saffron mr-2"></i> Knowledgeable guides</li>
+                            <li class="flex items-center"><i class="fas fa-check text-saffron mr-2"></i> All major temples covered</li>
+                        </ul>
+                        <a href="tel:+919761800777" class="btn-primary inline-block px-4 py-2 rounded-full text-sm font-medium">Call to Book</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guest House Section -->
+    <section class="py-16 bg-white" id="guest-house">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Prem Homestay</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Your home away from home in the holy city of Mathura</p>
+                <div class="w-20 h-1 bg-saffron mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8 mb-12">
+                <div class="lg:w-2/3">
+                    <img src="img/Guesthouse.jpeg" alt="Guest House" class="rounded-lg shadow-lg w-full" loading="lazy">
+                </div>
+                <div class="lg:w-1/3">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Comfortable Stay in Mathura</h3>
+                    <p class="text-gray-600 mb-6">Our guest house offers clean, comfortable accommodations just minutes away from major temples and attractions in Mathura.</p>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-center">
+                            <div class="bg-saffron text-white p-2 rounded-full mr-3">
+                                <i class="fas fa-wifi"></i>
+                            </div>
+                            <span class="font-medium">Free WiFi</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-saffron text-white p-2 rounded-full mr-3">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <span class="font-medium">Vegetarian Meals Available</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-saffron text-white p-2 rounded-full mr-3">
+                                <i class="fas fa-parking"></i>
+                            </div>
+                            <span class="font-medium">Secure Parking</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-saffron text-white p-2 rounded-full mr-3">
+                                <i class="fas fa-snowflake"></i>
+                            </div>
+                            <span class="font-medium">AC Rooms</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/919761800777" class="btn-secondary inline-block px-6 py-2 rounded-full font-medium w-full text-center">WhatsApp to Book</a>
+                </div>
+            </div>
+            
+            <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Our Room Options</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Room Card 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden room-card">
+                    <img src="img/Room1.jpeg" alt="Deluxe Room" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Deluxe Room</h4>
+                        <p class="text-gray-600 mb-4">Spacious room with modern amenities for a comfortable stay.</p>
+                        <ul class="text-gray-600 mb-4 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-saffron mr-2"></i> Double Bed</li>
+                            <li class="flex items-center"><i class="fas fa-check text-saffron mr-2"></i> AC</li>
+                            <li class="flex items-center"><i class="fas fa-check text-saffron mr-2"></i> Attached Bathroom</li>
+                            <li class="flex items-center"><i class="fas fa-check text-saffron mr-2"></i> TV</li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gray-800">₹1500/night</span>
+                            <a href="https://wa.me/919761800777" class="btn-primary inline-block px-4 py-2 rounded-full text-sm font-medium">WhatsApp to Book</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Room Card 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden room-card">
+                    <img src="img/Room2.jpeg" alt="Super Deluxe Room" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Super Deluxe Room</h4>
+                        <p class="text-gray-600 mb-4">Luxurious accommodation with premium amenities.</p>
+                        <ul class="text-gray-600 mb-4 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-saffron mr-2"></i> King Size Bed</li>
+                            <li class="flex items-center"><i class="fas fa-check text-saffron mr-2"></i> AC</li>
+                            <li class="flex items-center"><i class="fas fa-check text-saffron mr-2"></i> Attached Bathroom</li>
+                            <li class="flex items-center"><i class="fas fa-check text-saffron mr-2"></i> TV & Mini Fridge</li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gray-800">₹2500/night</span>
+                            <a href="https://wa.me/919761800777" class="btn-primary inline-block px-4 py-2 rounded-full text-sm font-medium">WhatsApp to Book</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Room Card 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden room-card">
+                    <img src="img/Room4.jpeg" alt="Family Suite" class="w-full h-48 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-2">Family Suite</h4>
+                        <p class="text-gray-600 mb-4">Perfect for families with interconnected rooms.</p>
+                        <ul class="text-gray-600 mb-4 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-saffron mr-2"></i> 2 Rooms + Living Area</li>
+                            <li class="flex items-center"><i class="fas fa-check text-saffron mr-2"></i> AC</li>
+                            <li class="flex items-center"><i class="fas fa-check text-saffron mr-2"></i> 2 Bathrooms</li>
+                            <li class="flex items-center"><i class="fas fa-check text-saffron mr-2"></i> TV & Dining Area</li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gray-800">₹3500/night</span>
+                            <a href="https://wa.me/919761800777" class="btn-primary inline-block px-4 py-2 rounded-full text-sm font-medium">WhatsApp to Book</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-16 bg-gray-50" id="gallery">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Gallery</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore the beauty of Mathura, Vrindavan, and our guest house</p>
+                <div class="w-20 h-1 bg-saffron mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=500&q=80" alt="Mathura Temple" class="w-full h-64 object-cover" loading="lazy">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1661096143891-82d6d72700fc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWF0aHVyYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" alt="Vrindavan Streets" class="w-full h-64 object-cover" loading="lazy">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=500&q=80" alt="Guest House Exterior" class="w-full h-64 object-cover" loading="lazy">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=500&q=80" alt="Deluxe Room Interior" class="w-full h-64 object-cover" loading="lazy">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGhvdGVsJTIwcm9vbXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" alt="Super Deluxe Room" class="w-full h-64 object-cover" loading="lazy">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1592229505726-ca121723b8ef?auto=format&fit=crop&w=500&q=80" alt="Family Suite" class="w-full h-64 object-cover" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Contact Section -->
+<section class="py-16 bg-white" id="contact">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Contact Us</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Get in touch for any inquiries or assistance</p>
+            <div class="w-20 h-1 bg-saffron mx-auto"></div>
+        </div>
+        <div class="max-w-lg mx-auto">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Reach Out</h3>
+            <p class="text-gray-600 mb-6 text-center">We're here to assist you with your travel and stay needs in Mathura and Vrindavan.</p>
+            <div class="space-y-4">
+                <p class="flex items-center justify-center"><i class="fas fa-phone mr-2 text-saffron"></i> <a href="tel:+919761800777" class="hover:text-saffron">+91 9761800777</a></p>
+                <p class="flex items-center justify-center"><i class="fas fa-envelope mr-2 text-saffron"></i> <a href="mailto:contact@brijyatratravels.com" class="hover:text-saffron">contact@brijyatratravels.com</a></p>
+                <p class="flex items-center justify-center"><i class="fas fa-map-marker-alt mr-2 text-saffron"></i> <a href="https://maps.google.com/?q=B-76,+Natwar+Nagar,+Dhauli+Pyau,+Hanuman+Nagar,+Mathura,+Uttar+Pradesh+281001" target="_blank" class="hover:text-saffron">B-76, Natwar Nagar, Dhauli Pyau, Hanuman Nagar, Mathura, Uttar Pradesh 281001</a></p>
+                <p class="flex items-center justify-center"><i class="fas fa-user mr-2 text-saffron"></i> Owner: Mr. Rahul Singh</p>
+            </div>
+            <div class="mt-6 flex justify-center space-x-4">
+                <a href="https://wa.me/919761800777" class="bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition duration-300" aria-label="Message us on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="tel:+919761800777" class="bg-green-500 text-white p-3 rounded-full hover:bg-green-600 transition duration-300" aria-label="Call us">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Brij Yatra Travels</h3>
+                    <p class="text-sm mb-4">Serving pilgrims and tourists since 2010 in Mathura & Vrindavan.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://wa.me/919761800777" class="text-white hover:text-saffron transition duration-300" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com" class="text-white hover:text-saffron transition duration-300" aria-label="Facebook">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com" class="text-white hover:text-saffron transition duration-300" aria-label="Instagram">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-sm hover:text-saffron transition duration-300">Home</a></li>
+                        <li><a href="#services" class="text-sm hover:text-saffron transition duration-300">Services</a></li>
+                        <li><a href="#guest-house" class="text-sm hover:text-saffron transition duration-300">Guest House</a></li>
+                        <li><a href="#gallery" class="text-sm hover:text-saffron transition duration-300">Gallery</a></li>
+                        <li><a href="#contact" class="text-sm hover:text-saffron transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center"><i class="fas fa-phone mr-2 text-saffron"></i> <a href="tel:+919761800777" class="hover:text-saffron">+91 9761800777</a></li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2 text-saffron"></i> <a href="mailto:contact@brijyatratravels.com" class="hover:text-saffron">contact@brijyatratravels.com</a></li>
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2 text-saffron"></i> <a href="https://maps.google.com/?q=B-76,+Natwar+Nagar,+Dhauli+Pyau,+Hanuman+Nagar,+Mathura,+Uttar+Pradesh+281001" target="_blank" class="hover:text-saffron">B-76, Natwar Nagar, Dhauli Pyau, Hanuman Nagar, Mathura, Uttar Pradesh 281001</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-8 border-t border-white/20 pt-4">
+                <p class="text-sm">&copy; 2025 Brij Yatra Travels. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
