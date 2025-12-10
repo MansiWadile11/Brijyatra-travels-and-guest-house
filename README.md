@@ -33,26 +33,4 @@ Mobile-Responsive Design
 Clean, empathetic navigation with sticky header and smooth transitions.
 Optimized for pilgrims on the go, with fast-loading sections and compassionate color palette (saffron and maroon for cultural resonance).
 
-📱 Getting Started
-
-Clone the Repo:
-textgit clone https://github.com/mansiwaide11/brij-yatra-travels-and-guest-house.git
-cd brij-yatra-travels-and-guest-house
-
-Open Locally:
-
-Use VS Code Live Server or open index.html in a browser.
-Ensure img/ folder is present with assets (Logo.png, room images, etc.).
-
-
-Customize:
-
-Update contact details or images in index.html.
-Edit inline CSS in <style> for compassionate tweaks.
-
-
-Deploy to GitHub Pages:
-
-Push to main branch.
-Settings > Pages > Source: Deploy from main branch > Save.
 Site live at https://mansiwaide11.github.io/brij-yatra-travels-and-guest-house/.
