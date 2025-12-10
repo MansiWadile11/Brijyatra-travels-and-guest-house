@@ -33,4 +33,4 @@ Mobile-Responsive Design
 Clean, empathetic navigation with sticky header and smooth transitions.
 Optimized for pilgrims on the go, with fast-loading sections and compassionate color palette (saffron and maroon for cultural resonance).
 
-Site live at https://mansiwaide11.github.io/brij-yatra-travels-and-guest-house/.
+Site live at (https://mansiwadile11.github.io/Brijyatra-travels-and-guest-house/)
